@@ -56,7 +56,7 @@ All behavior is **sandbox-driven**, performance-aware, and fully configurable.
 ---
 
 ### 🎛️ Extensive Sandbox Options
-- Dedicated **RMATF sandbox page**
+- Dedicated **RCATF sandbox page**
 - Presets + custom values
 - Fully localized (EN / DE)
 - Debug logging available for testing
@@ -67,8 +67,8 @@ All behavior is **sandbox-driven**, performance-aware, and fully configurable.
 
 1. Download or clone this repository
 2. Place it inside your `ProjectZomboid/mods/` directory
-3. Enable **Re:Mind — After the Fall** in the Mods menu
-4. Configure the mod via **Sandbox → RMATF**
+3. Enable **Re:Code — After the Fall** in the Mods menu
+4. Configure the mod via **Sandbox → RCATF**
 5. Start or load a game
 
 ⚠️ *Most effects apply when new chunks are loaded.*
@@ -112,7 +112,7 @@ All behavior is **sandbox-driven**, performance-aware, and fully configurable.
 
 ## ⚠️ Tile Overlay Note
 
-RMATF includes experimental support for **TileOverlays**, but:
+RCATF includes experimental support for **TileOverlays**, but:
 
 - Some B42 tiles may cause log spam
 - Therefore **TileOverlays are disabled by default**
@@ -145,4 +145,4 @@ RMATF includes experimental support for **TileOverlays**, but:
 
 ## 📜 License
 
-MIT
+**MIT**
