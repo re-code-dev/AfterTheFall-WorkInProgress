@@ -1,4 +1,4 @@
-<h1 align="center">🌱 Re:Code — After the Fall (RMATF)</h1>
+<h1 align="center">🌱 Re:Code — After the Fall (RCATF)</h1>
 
 <p align="center">
   <i>World degradation, overgrowth & decay for Project Zomboid (Build 42)</i>
