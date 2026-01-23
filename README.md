@@ -4,6 +4,7 @@
   <i>World degradation, overgrowth & decay for Project Zomboid (Build 42)</i>
 </p>
 
+
 ---
 
 ## 🧠 Overview
@@ -66,7 +67,7 @@ All behavior is **sandbox-driven**, performance-aware, and fully configurable.
 ## ⚙️ Installation
 
 1. Download or clone this repository
-2. Place it inside your `ProjectZomboid/mods/` directory
+2. Place it inside your `C:\Users\<YourName>\Zomboid\mods` directory
 3. Enable **Re:Code — After the Fall** in the Mods menu
 4. Configure the mod via **Sandbox → RCATF**
 5. Start or load a game
@@ -143,6 +144,8 @@ RCATF includes experimental support for **TileOverlays**, but:
 
 ---
 
-## 📜 License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**MIT**
+## 📜 Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz. Siehe die Datei [LICENSE](LICENSE) für Details.
