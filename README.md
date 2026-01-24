@@ -1,4 +1,4 @@
-# 🧟‍♂️ AfterTheFall (Build 42)
+# 🧟‍♂️ AfterTheFall (Build 42) **(WIP!)**
 
 > **AfterTheFall** is a modular **gameplay extension for Project Zomboid (Build 42)** focused on  
 > **realism**, **skill-based progression**, **developer transparency**, and  
