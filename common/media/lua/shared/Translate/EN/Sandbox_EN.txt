@@ -1,0 +1,70 @@
+Sandbox_EN {
+    Sandbox_RMATF = "ReMinds After the Fall",
+
+    Sandbox_RMATF_RMATFEnable = "Enable mod",
+    Sandbox_RMATF_Enable_tooltip = "Master switch for all RMATF world changes",
+
+    Sandbox_RMATF_Debug = "Debug logging",
+    Sandbox_RMATF_tooltip = "Write extra RMATF logs to the console",
+
+    Sandbox_RMATF_EnableGenerator = "Apply world generator",
+    Sandbox_RMATF_EnableGenerator_tooltip = "Places overgrowth, trees and overlays while chunks load (recommended)",
+
+    Sandbox_RMATF_MaxSquaresPerTick = "Max squares per tick",
+    Sandbox_RMATF_MaxSquaresPerTick_tooltip = "Performance throttle. Higher = faster but may cause stutter",
+
+    Sandbox_RMATF_EnableWaterCheck = "Respect water tiles",
+    Sandbox_RMATF_EnableWaterCheck_tooltip = "Prevents vegetation and overlays from spawning on water tiles",
+
+    Sandbox_RMATF_treesChance = "Tree spawn chance",
+    Sandbox_RMATF_treesChance_tooltip = "How often RMATF attempts to place trees",
+    Sandbox_RMATF_valTreesChance_option1 = "Low",
+    Sandbox_RMATF_valTreesChance_option2 = "Medium",
+    Sandbox_RMATF_valTreesChance_option3 = "High",
+    
+    Sandbox_RMATF_noTreesOnRoad = "No trees on roads",
+    Sandbox_RMATF_noTreesOnRoad_tooltip = "Prevents trees from spawning on road tiles",
+
+    Sandbox_RMATF_vegOverlayChance = "Vegetation overlay chance",
+    Sandbox_RMATF_vegOverlayChance_tooltip = "How often vegetation overlays are applied",
+    Sandbox_RMATF_valVegOverlayChance_option1 = "Low",
+    Sandbox_RMATF_valVegOverlayChance_option2 = "Medium",
+    Sandbox_RMATF_valVegOverlayChance_option3 = "High",
+    
+
+    Sandbox_RMATF_IndoorMultiplier = "Indoor overgrow multiplier",
+    Sandbox_RMATF_IndoorMultiplier_tooltip = "Scales indoor overgrowth (0–400%)",
+
+    Sandbox_RMATF_OutdoorMultiplier = "Outdoor overgrow multiplier",
+    Sandbox_RMATF_OutdoorMultiplier_tooltip = "Scales outdoor overgrowth (0–400%)",
+
+    Sandbox_RMATF_VinesMultiplier = "Vines multiplier",
+    Sandbox_RMATF_VinesMultiplier_tooltip = "Scales wall and fence vines (0–400%)",
+
+    Sandbox_RMATF_IndoorHardCap = "Indoor overgrow cap (%)",
+    Sandbox_RMATF_IndoorHardCap_tooltip = "Hard limit after multipliers (0 disables cap)",
+
+    Sandbox_RMATF_OutdoorHardCap = "Outdoor overgrow cap (%)",
+    Sandbox_RMATF_OutdoorHardCap_tooltip = "Hard limit after multipliers (0 disables cap)",
+
+    Sandbox_RMATF_VinesHardCap = "Vines cap (%)",
+    Sandbox_RMATF_VinesHardCap_tooltip = "Hard limit after multipliers (0 disables cap)",
+
+    Sandbox_RMATF_DecayMultiplier = "Decay multiplier",
+    Sandbox_RMATF_DecayMultiplier_tooltip = "Scales all decay chances (0–400%)",
+
+    Sandbox_RMATF_EnableDecay = "Enable decay / aging",
+    Sandbox_RMATF_EnableDecay_tooltip = "Adds small damage so buildings don’t look brand new",
+
+    Sandbox_RMATF_WallDamageChance = "Wall damage chance (%)",
+    Sandbox_RMATF_WallDamageChance_tooltip = "Chance to damage some walls/windows/doors",
+
+    Sandbox_RMATF_RoofDamageChance = "Roof damage chance (%)",
+    Sandbox_RMATF_RoofDamageChance_tooltip = "Chance to remove roof tiles",
+
+    Sandbox_RMATF_WindowSmashChance = "Window smash chance (%)",
+    Sandbox_RMATF_WindowSmashChance_tooltip = "Reserved for future window effects",
+
+    Sandbox_RMATF_BarricadeChance = "Barricade chance (%)",
+    Sandbox_RMATF_BarricadeChance_tooltip = "Reserved for future barricade effects",
+}
