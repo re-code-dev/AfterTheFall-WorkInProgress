@@ -1,151 +1,154 @@
-<h1 align="center">🌱 Re:Code — After the Fall (RCATF)</h1>
+# AfterTheFall (Build 42)
 
-<p align="center">
-  <i>World degradation, overgrowth & decay for Project Zomboid (Build 42)</i>
-</p>
+**AfterTheFall** is a modular **gameplay extension for Project Zomboid (Build 42)** focused on  
+**realism**, **skill-based progression**, **developer transparency**, and **engine-compliant implementation**.
 
-
----
-
-## 🧠 Overview
-
-**Re:Code — After the Fall (RCATF)** is a *TYL-inspired, clean-room world mutation mod* for  
-**Project Zomboid (Build 42)**.
-
-Instead of running constant background checks, RCATF applies **deterministic world changes on chunk load**, creating a believable *“after the fall”* atmosphere:
-
-- 🌿 Nature reclaiming buildings  
-- 🧱 Subtle structural decay  
-- 🌳 Sparse trees and uncontrolled vegetation  
-- 🕰️ A world that visibly ages over time  
-
-All behavior is **sandbox-driven**, performance-aware, and fully configurable.
+This mod is designed for players and modders who expect deep systems, clean architecture, and predictable, debuggable behavior.
 
 ---
 
-## ✨ Features
+## 🚀 Features Overview
 
-### 🌍 Chunk-Load World Generator
-- Mutates the world **only when chunks are loaded**
-- Already-processed chunks are cached to prevent re-processing
-- No global per-tick scanning → **excellent performance**
+### 🔧 Dynamic Gameplay Systems
+- Skill-based calculations instead of static values  
+- Fully engine-compliant (no client-side cheating)  
+- Designed specifically around **Build 42 mechanics**
 
----
+### 🧠 Advanced Tooltips
+- Custom tooltip pipeline  
+- Context-aware information display  
+- Optional separate tooltip panel  
+- Proper text wrapping and spacing (UI-optimized)
 
-### 🌱 Overgrowth & Vegetation
-- Outdoor ground overgrowth
-- Indoor overgrowth (separate chance & multiplier)
-- Wall & fence vines 🌿
-- Optional **hard caps** to limit vegetation density
-- Water tiles are respected (no vegetation on water)
+### 🧪 Debug & Developer Tools
+- Dedicated **AfterTheFall Debug / Settings Panel**  
+- Hotkey-based access (e.g. **CTRL + SHIFT + F11**)  
+- Tabs, checkboxes, sliders  
+- Persistent settings via `ModData` / `SandboxOptions`
 
----
-
-### 🌳 Trees
-- Optional tree spawning
-- Spawn chance controlled via divisor
-- 🚧 Option to **prevent trees from spawning on roads**
-
----
-
-### 🏚️ Decay / Aging System
-- Optional visual aging of the world
-- Wall damage chance
-- Roof damage chance
-- Global decay multiplier for fine-tuning intensity
+### ⚙️ Modular Architecture
+- Clean separation of:
+  - client  
+  - server  
+  - shared  
+- Easily extensible without touching core systems  
+- Multiple subsystems can run in parallel
 
 ---
 
-### 🎛️ Extensive Sandbox Options
-- Dedicated **RCATF sandbox page**
-- Presets + custom values
-- Fully localized (EN / DE)
-- Debug logging available for testing
+## ✅ Supported Systems (Current)
+
+- ✔ Custom UI panels  
+- ✔ Custom hotkeys  
+- ✔ Build-42-compatible events  
+- ✔ Persistent configuration  
+- ✔ Tooltip overlays  
+- ✔ Debug logging  
+- ✔ Foundation for future gameplay modules  
 
 ---
 
-## ⚙️ Installation
+## 🗂 Project Structure (Build 42)
 
-1. Download or clone this repository
-2. Place it inside your `C:\Users\<YourName>\Zomboid\mods` directory
-3. Enable **Re:Code — After the Fall** in the Mods menu
-4. Configure the mod via **Sandbox → RCATF**
-5. Start or load a game
+```text
+AfterTheFall/
+└── Contents/
+    └── mods/
+        └── AfterTheFall/
+            ├── common/
+            │   └── media/
+            │       └── ...
+            └── 42/
+                ├── media/
+                │   ├── lua/
+                │   │   ├── client/
+                │   │   ├── server/
+                │   │   └── shared/
+                │   └── ui/
+                ├── mod.info
+                └── poster.png
+```
 
-⚠️ *Most effects apply when new chunks are loaded.*
-
----
-
-## 🧩 Sandbox Options (Highlights)
-
-### 🔧 Core
-- ✅ Enable / disable mod
-- 🐞 Debug logging
-- 🌍 Enable chunk-load world generator
-- 🚦 Max processed squares per tick (performance throttle)
-- 💧 Respect water tiles
-
-### 🌿 Vegetation
-- Base vegetation chance (preset or custom)
-- Indoor / Outdoor / Vine multipliers
-- Optional hard caps
-
-### 🌳 Trees
-- Tree spawn chance
-- ❌ Disable tree spawning on roads
-
-### 🏚️ Decay
-- Enable world aging
-- Wall damage chance
-- Roof damage chance
-- Global decay multiplier
+**Notes:**  
+- `common/` contains version-independent assets  
+- `42/` contains Build-42-specific code  
+- Load order: **common → 42**
 
 ---
 
-## 🚀 Performance Philosophy
+## 📦 Installation
 
-- ❌ No per-tick world scanning
-- ✅ Chunk-based deterministic processing
-- ✅ Cached processed chunks
-- ⚡ Designed for long-running saves
+### Manual Installation (recommended for development)
+1. Copy the mod folder to:  
+   `%UserProfile%/Zomboid/Workshop/`
+2. Ensure **no duplicate versions** of the mod exist  
+3. Enable the mod in the in-game mod menu
 
----
-
-## ⚠️ Tile Overlay Note
-
-RCATF includes experimental support for **TileOverlays**, but:
-
-- Some B42 tiles may cause log spam
-- Therefore **TileOverlays are disabled by default**
-- The **Chunk Generator mode is the recommended approach**
+### Steam Workshop
+- Upload handled via `workshop.txt`  
+- `preview.png` must be **256 × 256**
 
 ---
 
-## 🧪 Troubleshooting
+## 🎮 Controls
 
-**Nothing seems to happen?**
-- Ensure the mod is enabled
-- Ensure *World Generator* is active
-- Move into unexplored chunks
-
-**Stuttering while exploring?**
-- Lower *Max Squares Per Tick* in sandbox options
-
-**Log spam?**
-- Avoid TileOverlay features
-- Enable Debug Logs only when needed
+- Open AfterTheFall panel: **CTRL + SHIFT + F11**  
+- Switch tabs: **Mouse**  
+- Save settings: **Automatic (persistent)**
 
 ---
 
-## 👤 Credits
+## 💾 Persistence & Data Handling
 
-- **Author:** Seppel & Volt
-- **Concept:** Inspired by **The Last Of Us**
+The mod relies exclusively on **stable Build-42 systems**:
+
+- `ModData` for runtime data  
+- `SandboxOptions` for world-level defaults  
+- No client-side modification of authoritative values  
+
+This ensures multiplayer safety and predictable behavior.
 
 ---
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 🧩 Compatibility
 
-## 📜 Lizenz
+- ✅ Project Zomboid **Build 42**  
+- ✅ Singleplayer  
+- ✅ Multiplayer-safe architecture (server-authoritative)  
+- ❌ Not intended for Build 41  
 
-Dieses Projekt steht unter der MIT-Lizenz. Siehe die Datei [LICENSE](LICENSE) für Details.
+---
+
+## 🐞 Debugging
+
+Active log tag:  
+**[AfterTheFall]**
+
+Typical log output includes:
+- Bootstrap status  
+- Panel initialization  
+- Event registration  
+- Hotkey binding  
+
+---
+
+## 🛣 Roadmap (Planned)
+
+- ⏳ Expanded skill integrations  
+- ⏳ Additional modular gameplay systems  
+- ⏳ Extended UI configuration  
+- ⏳ Optional standalone tooltip window  
+
+---
+
+## 🤝 Development & Contributions
+
+Pull requests and technical discussions are welcome.
+
+Please ensure:
+- Full **Build-42 API compliance**  
+- No direct engine overrides  
+- Clear client / server separation  
+
+---
+
