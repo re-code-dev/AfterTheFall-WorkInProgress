@@ -148,7 +148,19 @@ Pull requests and technical discussions are welcome.
 Please ensure:
 - Full **Build-42 API compliance**  
 - No direct engine overrides  
-- Clear client / server separation  
+- Clear client / server separation
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 📜 Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz. Siehe die Datei [LICENSE](LICENSE) für Details.
+
+---
+
+## ⭐ Credits
+
+Entwickelt von **Volt & Seppel**  
+Für **Re:Code – Modular Game Mod Development** 🧟‍♂️
 ---
 
