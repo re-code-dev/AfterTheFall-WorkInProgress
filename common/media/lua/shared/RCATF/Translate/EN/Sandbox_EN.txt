@@ -1,0 +1,17 @@
+Sandbox_EN {
+    Sandbox_RCATF = "Re:Code After the Fall",
+
+    Sandbox_RCATF_SetTreeSpawn = "Set tree spawn",
+    Sandbox_RCATF_SetBushSpawn = "Set bush spawn",
+    Sandbox_RCATF_SetGrassSpawn = "Set grass spawn",
+    Sandbox_RCATF_SetFarmVegetation = "Set farm vegetation",
+
+    Sandbox_RCATF_TreeDensity = "Tree density",
+    Sandbox_RCATF_BushDensity = "Bush density",
+    Sandbox_RCATF_GrassDensity = "Grass density",
+
+    Sandbox_RCATF_TreeDensity_Tooltip = "Controls how many trees spawn per chunk. Range: 0.1 to 1.0.",
+    Sandbox_RCATF_BushDensity_Tooltip = "Controls how dense bushes grow. Range: 0.1 to 1.0.",
+    Sandbox_RCATF_GrassDensity_Tooltip = "Controls how strong grass overgrowth is. Range: 0.1 to 1.0.",
+
+}

@@ -1,0 +1,11 @@
+name=ReCodes After the Fall
+id=RecodesAftertheFall
+description=10 Years into Darkness
+require=\StarlitLibrary
+author=Re:Code
+poster=poster.png
+icon=icon.png
+modversion=1.0
+versionMin=42.13.1
+versionMax=42.13.+
+Homepage=https://discord.gg/PBxeqe8Cr8

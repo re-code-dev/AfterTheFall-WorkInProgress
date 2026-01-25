@@ -1,0 +1,16 @@
+Sandbox_DE {
+    Sandbox_RCATF = "Re:Code After the Fall",
+
+    Sandbox_RCATF_SetTreeSpawn = "Baum-Spawn einstellen",
+    Sandbox_RCATF_SetBushSpawn = "Busch-Spawn einstellen",
+    Sandbox_RCATF_SetGrassSpawn = "Gras-Spawn einstellen",
+    Sandbox_RCATF_SetFarmVegetation = "Farm-Vegetation einstellen",
+
+    Sandbox_RCATF_TreeDensity = "Baum-Dichte",
+    Sandbox_RCATF_BushDensity = "Busch-Dichte",
+    Sandbox_RCATF_GrassDensity = "Gras-Dichte",
+
+    Sandbox_RCATF_TreeDensity_Tooltip = "Steuert, wie viele Bäume pro Chunk spawnen. Bereich: 0,1 bis 1,0.",
+    Sandbox_RCATF_BushDensity_Tooltip = "Steuert, wie dicht Büsche wachsen. Bereich: 0,1 bis 1,0.",
+    Sandbox_RCATF_GrassDensity_Tooltip = "Steuert, wie stark Gras überwuchert. Bereich: 0,1 bis 1,0.",
+}

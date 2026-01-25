@@ -1,0 +1,109 @@
+VERSION = 1,
+
+option RCATF.TreeChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 30,
+    page = RCATF,
+    translation = RCATF_TreeChance,
+}
+
+option RCATF.VegOverlayChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 30,
+    page = RCATF,
+    translation = RCATF_VegOverlayChance,
+}
+
+option RCATF.GrassChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 30,
+    page = RCATF,
+    translation = RCATF_GrassChance,
+}
+
+option RCATF.BushChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 30,
+    page = RCATF,
+    translation = RCATF_BushChance,
+}
+
+option RCATF.StoryChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 20,
+    page = RCATF,
+    translation = RCATF_StoryChance,
+}
+
+option RCATF.VehicleChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 15,
+    page = RCATF,
+    translation = RCATF_VehicleChance,
+}
+
+option RCATF.RandomWallChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 20,
+    page = RCATF,
+    translation = RCATF_RandomWallChance,
+}
+
+option RCATF.RandomTrashChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 20,
+    page = RCATF,
+    translation = RCATF_RandomTrashChance,
+}
+
+option RCATF.RandomBarricadeChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 15,
+    page = RCATF,
+    translation = RCATF_RandomBarricadeChance,
+}
+
+option RCATF.RoofDestroyChance
+{
+    type = integer,
+    min = 10,
+    max = 100,
+    default = 15,
+    page = RCATF,
+    translation = RCATF_RoofDestroyChance,
+}
+
+option RCATF.NoTreesOnRoad
+{
+    type = boolean,
+    default = false,
+    page = RCATF,
+    translation = RCATF_NoTreesOnRoad,
+}
