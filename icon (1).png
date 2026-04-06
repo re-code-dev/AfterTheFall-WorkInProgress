@@ -1,0 +1,10 @@
+name=ReCodes After the Fall
+id=RecodesAftertheFall
+description=10 Years into Darkness
+author=Seppel
+poster=poster.png
+icon=icon.png
+modversion=1.3.6
+versionMin=42.0.00
+require=StarlitLibrary
+Homepage=https://discord.gg/PBxeqe8Cr8

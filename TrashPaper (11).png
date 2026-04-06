@@ -1,0 +1,415 @@
+local ROAD_TILES = {
+    ["blends_street_01_96"] = true,["blends_street_01_101"] = true,["blends_street_01_102"] = true,["blends_street_01_103"] = true,
+    ["blends_street_01_80"] = true,["blends_street_01_85"] = true,["blends_street_01_86"] = true,["blends_street_01_87"] = true,
+    ["blends_street_01_64"] = true,["blends_street_01_69"] = true,["blends_street_01_70"] = true,["blends_street_01_71"] = true,
+    ["blends_street_01_48"] = true,["blends_street_01_53"] = true,["blends_street_01_54"] = true,["blends_street_01_55"] = true,
+    ["blends_street_01_32"] = true,["blends_street_01_37"] = true,["blends_street_01_38"] = true,["blends_street_01_39"] = true,
+    ["blends_street_01_16"] = true,["blends_street_01_21"] = true,["floors_exterior_street_01_0"] = true,["floors_exterior_street_01_14"] = true,
+    ["floors_exterior_street_01_16"] = true,["floors_exterior_street_01_17"] = true,
+    ["floors_exterior_tilesandstone_01_3"] = true,["floors_exterior_tilesandstone_01_4"] = true,["floors_exterior_tilesandstone_01_5"] = true,["floors_exterior_tilesandstone_01_6"] = true,
+}
+
+local NATURAL_TILES = {
+    ["blends_natural_01_0"] = true,["blends_natural_01_1"] = true,["blends_natural_01_2"] = true,["blends_natural_01_3"] = true,
+    ["blends_natural_01_4"] = true,["blends_natural_01_5"] = true,["blends_natural_01_6"] = true,["blends_natural_01_7"] = true,
+    ["blends_natural_01_16"] = true,["blends_natural_01_17"] = true,["blends_natural_01_18"] = true,["blends_natural_01_19"] = true,
+    ["blends_natural_01_20"] = true,["blends_natural_01_21"] = true,["blends_natural_01_22"] = true,["blends_natural_01_23"] = true,
+    ["blends_natural_01_32"] = true,["blends_natural_01_33"] = true,["blends_natural_01_34"] = true,["blends_natural_01_35"] = true,
+    ["blends_natural_01_36"] = true,["blends_natural_01_37"] = true,["blends_natural_01_38"] = true,["blends_natural_01_39"] = true,
+    ["blends_natural_01_48"] = true,["blends_natural_01_49"] = true,["blends_natural_01_50"] = true,["blends_natural_01_51"] = true,
+    ["blends_natural_01_52"] = true,["blends_natural_01_53"] = true,["blends_natural_01_54"] = true,["blends_natural_01_55"] = true,
+    ["floors_exterior_natural_01_12"] = true,["floors_exterior_natural_01_13"] = true,
+}
+
+local FLAT_ROOF_TILES = {
+    ["roofs_01_22"] = true,["roofs_01_23"] = true,["roofs_02_22"] = true,["roofs_02_23"] = true,
+    ["roofs_01_90"] = true,["roofs_01_91"] = true,["roofs_01_92"] = true,["roofs_01_93"] = true,
+    ["roofs_02_90"] = true,["roofs_02_91"] = true,["roofs_02_92"] = true,["roofs_02_93"] = true,
+    ["roofs_05_22"] = true,["roofs_05_23"] = true,["roofs_06_22"] = true,["roofs_06_23"] = true,
+    ["roofs_04_55"] = true,["floors_exterior_street_01_16"] = true,["floors_exterior_street_01_17"] = true,
+    ["floors_exterior_street_01_0"] = true,["floors_exterior_street_01_14"] = true,["floors_exterior_tilesandstone_01_4"] = true,
+    ["floors_interior_tilesandwood_01_16"] = true,
+}
+
+local TREE_POOL = {
+    "e_yellowwood_1_0","e_yellowwood_1_1","e_carolinasilverbell_1_0","e_carolinasilverbell_1_1",
+    "e_easternredbud_1_0","e_easternredbud_1_1","e_virginiapine_1_0","e_virginiapine_1_1",
+    "e_redmaple_1_0","e_redmaple_1_1","e_americanlinden_1_0","e_americanlinden_1_1",
+    "e_americanholly_1_0","e_americanholly_1_1","e_canadianhemlock_1_0","e_canadianhemlock_1_1",
+    "e_cockspurhawthorn_1_0","e_cockspurhawthorn_1_1","e_dogwood_1_0","e_dogwood_1_1",
+    "e_riverbirch_1_0","e_riverbirch_1_1",
+    "e_yellowwoodJUMBO_1_0","e_yellowwoodJUMBO_1_1","e_carolinasilverbellJUMBO_1_0","e_carolinasilverbellJUMBO_1_1",
+    "e_easternredbudJUMBO_1_0","e_easternredbudJUMBO_1_1","e_virginiapineJUMBO_1_0","e_virginiapineJUMBO_1_1",
+    "e_redmapleJUMBO_1_0","e_redmapleJUMBO_1_1","e_americanlindenJUMBO_1_0","e_americanlindenJUMBO_1_1",
+    "e_americanhollyJUMBO_1_0","e_americanhollyJUMBO_1_1","e_canadianhemlockJUMBO_1_0","e_canadianhemlockJUMBO_1_1",
+    "e_cockspurhawthornJUMBO_1_0","e_cockspurhawthornJUMBO_1_1","e_dogwoodJUMBO_1_0","e_dogwoodJUMBO_1_1",
+    "e_riverbirchJUMBO_1_0","e_riverbirchJUMBO_1_1"
+}
+
+local SMALL_TREE_POOL = {
+    "e_yellowwood_1_0","e_carolinasilverbell_1_0","e_easternredbud_1_0","e_virginiapine_1_0",
+    "e_redmaple_1_0","e_americanlinden_1_0","e_americanholly_1_0","e_canadianhemlock_1_0",
+    "e_cockspurhawthorn_1_0","e_dogwood_1_0","e_riverbirch_1_0"
+}
+
+local GROUND_GRASS_POOL = {
+    "e_newgrass_1_16","e_newgrass_1_17","e_newgrass_1_18","e_newgrass_1_19","e_newgrass_1_20","e_newgrass_1_21",
+    "e_newgrass_1_8","e_newgrass_1_9","e_newgrass_1_10","e_newgrass_1_11","e_newgrass_1_12","e_newgrass_1_13",
+    "e_newgrass_1_0","e_newgrass_1_1","e_newgrass_1_2","e_newgrass_1_3","e_newgrass_1_4","e_newgrass_1_5"
+}
+
+local ROAD_GRASS_POOL = {
+    "e_newgrass_1_24","e_newgrass_1_27","e_newgrass_1_28","e_newgrass_1_29",
+    "e_newgrass_1_48","e_newgrass_1_51","e_newgrass_1_52","e_newgrass_1_53",
+    "e_newgrass_1_73","e_newgrass_1_74","e_newgrass_1_75"
+}
+
+local LEAF_POOL = {
+    "d_floorleaves_1_0","d_floorleaves_1_1","d_floorleaves_1_2","d_floorleaves_1_3","d_floorleaves_1_4","d_floorleaves_1_5",
+    "d_floorleaves_1_6","d_floorleaves_1_7","d_floorleaves_1_8","d_floorleaves_1_9","d_floorleaves_1_10","d_floorleaves_1_11"
+}
+
+local BUSH_POOL = {
+    "f_bushes_1_65","f_bushes_1_97","f_bushes_1_98","f_bushes_1_78","f_bushes_1_110","f_bushes_1_109",
+    "f_bushes_1_99","f_bushes_1_67","f_bushes_1_103","f_bushes_1_71","f_bushes_1_69","f_bushes_1_72",
+    "f_bushes_1_73","f_bushes_1_75","f_bushes_1_76","f_bushes_1_79","f_bushes_1_101","f_bushes_1_102",
+    "f_bushes_1_104","f_bushes_1_105","f_bushes_1_107","f_bushes_1_108","f_bushes_1_111","f_bushes_1_64",
+    "f_bushes_1_96","f_bushes_1_100","f_bushes_1_68","f_bushes_1_106","f_bushes_1_74"
+}
+
+local WALL_W = {"f_wallvines_1_31","f_wallvines_1_30","f_wallvines_1_25","f_wallvines_1_24"}
+local WALL_N = {"f_wallvines_1_33","f_wallvines_1_32","f_wallvines_1_27","f_wallvines_1_26"}
+local WALL_NW = {"f_wallvines_1_35","f_wallvines_1_34","f_wallvines_1_29","f_wallvines_1_28"}
+local WALL_W_LOW = {"f_wallvines_1_25","f_wallvines_1_24"}
+local WALL_N_LOW = {"f_wallvines_1_27","f_wallvines_1_26"}
+local WALL_NW_LOW = {"f_wallvines_1_29","f_wallvines_1_28"}
+
+local function startsWith(value, prefix)
+    return value ~= nil and prefix ~= nil and string.sub(value, 1, #prefix) == prefix
+end
+
+local function clamp(value, minValue, maxValue)
+    if value < minValue then return minValue end
+    if value > maxValue then return maxValue end
+    return value
+end
+
+local function floorSpriteName(square)
+    local floor = square and square:getFloor()
+    local sprite = floor and floor:getSprite()
+    return sprite and sprite:getName() or nil
+end
+
+local function getOption(name, defaultValue)
+    local atf = SandboxVars and SandboxVars.ATF
+    if not atf then return defaultValue end
+    local value = atf[name]
+    if value == nil then return defaultValue end
+    return value
+end
+
+local function ratioPair(a, b, defaultA, defaultB)
+    a = tonumber(a) or defaultA
+    b = tonumber(b) or defaultB
+    if a < 0 then a = 0 end
+    if b < 0 then b = 0 end
+    if a == 0 and b == 0 then
+        a, b = defaultA, defaultB
+    end
+    local total = a + b
+    if total <= 0 then total = 1 end
+    return a / total, b / total
+end
+
+local function getConfig()
+    local treeChance = tonumber(getOption('TreeChance', 15)) or 15
+    local treeScale = tonumber(getOption('TreeScale', 35)) or 35
+    local bushChance = tonumber(getOption('BushChance', 6)) or 6
+    local bushScale = tonumber(getOption('BushScale', 100)) or 100
+    local grassChance = tonumber(getOption('GrassChance', 100)) or 100
+    local groundcoverScale = tonumber(getOption('GroundcoverScale', 100)) or 100
+    local roadOverlayChance = tonumber(getOption('RoadOverlayChance', 100)) or 100
+    local sidewalkOverlayChance = tonumber(getOption('SidewalkOverlayChance', 100)) or 100
+    local roofOverlayChance = tonumber(getOption('RoofOverlayChance', 20)) or 20
+    local roofLeafRatio = tonumber(getOption('RoofLeafRatio', 60)) or 60
+    local vinesChance = tonumber(getOption('VinesChance', 15)) or 15
+    local noTreesOnRoad = getOption('noTreesOnRoad', false) == true
+    local roadGrassRatio, roadMossRatio = ratioPair(getOption('RoadGrassRatio', 75), getOption('RoadMossRatio', 25), 75, 25)
+    local sidewalkGrassRatio, sidewalkMossRatio = ratioPair(getOption('SidewalkGrassRatio', 60), getOption('SidewalkMossRatio', 40), 60, 40)
+
+    return {
+        treeDensity = clamp((treeChance / 100) * (treeScale / 100) * 1.5, 0, 1),
+        bushDensity = clamp((bushChance / 100) * (bushScale / 100), 0, 1),
+        groundcoverDensity = clamp((grassChance / 100) * (groundcoverScale / 100), 0, 1),
+        roadOverlayChance = clamp(roadOverlayChance / 100, 0, 1),
+        sidewalkOverlayChance = clamp(sidewalkOverlayChance / 100, 0, 1),
+        roofOverlayChance = clamp(roofOverlayChance / 100, 0, 1),
+        roofLeafRatio = clamp(roofLeafRatio / 100, 0, 1),
+        vinesChance = clamp(vinesChance / 100, 0, 1),
+        roadGrassRatio = roadGrassRatio,
+        roadMossRatio = roadMossRatio,
+        sidewalkGrassRatio = sidewalkGrassRatio,
+        sidewalkMossRatio = sidewalkMossRatio,
+        noTreesOnRoad = noTreesOnRoad,
+    }
+end
+
+local function propertyNames(obj)
+    local sprite = obj and obj:getSprite()
+    local props = sprite and sprite:getProperties()
+    local names = props and props:getPropertyNames()
+    return names and tostring(names) or ""
+end
+
+local function hasProperty(obj, key)
+    local names = propertyNames(obj)
+    return names ~= "" and string.find(names, key, 1, true) ~= nil
+end
+
+local function squareIsUsable(square)
+    if not square then return false end
+    if not square:hasFloor(true) then return false end
+    if square:HasStairs() then return false end
+    if square:getRoom() ~= nil then return false end
+    if not square:isOutside() then return false end
+    if square:isSolid() then return false end
+    if square:isSolidTrans() then return false end
+    local objects = square:getObjects()
+    if not objects then return true end
+    for i = 0, objects:size() - 1 do
+        local obj = objects:get(i)
+        if obj then
+            if instanceof(obj, 'IsoWindow') or instanceof(obj, 'IsoDoor') then return false end
+        end
+    end
+    return true
+end
+
+local function hasPrefixObject(square, prefix)
+    local objects = square and square:getObjects()
+    if not objects then return false end
+    for i = 0, objects:size() - 1 do
+        local obj = objects:get(i)
+        if obj then
+            local spriteName = obj.getSpriteName and obj:getSpriteName() or nil
+            local textureName = obj.getTextureName and obj:getTextureName() or nil
+            local name = spriteName or textureName
+            if name and startsWith(name, prefix) then return true end
+        end
+    end
+    return false
+end
+
+local function hasAnyGrowth(square)
+    local objects = square and square:getObjects()
+    if not objects then return false end
+    for i = 0, objects:size() - 1 do
+        local obj = objects:get(i)
+        if obj then
+            if instanceof(obj, 'IsoTree') then return true end
+            local spriteName = obj.getSpriteName and obj:getSpriteName() or nil
+            local textureName = obj.getTextureName and obj:getTextureName() or nil
+            local name = spriteName or textureName
+            if name then
+                if startsWith(name, 'e_') or startsWith(name, 'f_bushes_') or startsWith(name, 'd_floorleaves_') or startsWith(name, 'f_wallvines_') then
+                    return true
+                end
+            end
+        end
+    end
+    return false
+end
+
+local function isRoadSquare(square)
+    local floorName = floorSpriteName(square)
+    return floorName and ROAD_TILES[floorName] == true or false
+end
+
+local function isSidewalkSquare(square)
+    local floorName = floorSpriteName(square)
+    if not floorName or ROAD_TILES[floorName] then return false end
+    if startsWith(floorName, 'blends_street_') or startsWith(floorName, 'floors_exterior_street_') or startsWith(floorName, 'floors_exterior_tilesandstone_') then
+        return true
+    end
+    if string.find(floorName, 'sidewalk', 1, true) or string.find(floorName, 'pavement', 1, true) or string.find(floorName, 'concrete', 1, true) then
+        return true
+    end
+    return false
+end
+
+local function isFlatRoofSquare(square)
+    local z = square:getZ()
+    if z <= 0 then return false end
+    if square:getRoom() ~= nil then return false end
+    if not square:isOutside() then return false end
+    local floorName = floorSpriteName(square)
+    if not floorName then return false end
+    if FLAT_ROOF_TILES[floorName] then return true end
+    if startsWith(floorName, 'roofs_') or startsWith(floorName, 'roofs_accents_') or startsWith(floorName, 'roofs_exterior_') then
+        return true
+    end
+    return false
+end
+
+local function addIsoObject(square, spriteName, tileObject)
+    if not square or not spriteName then return nil end
+    local chunk = square.getChunk and square:getChunk() or nil
+    if not chunk then return nil end
+    local obj = IsoObject.new(getCell(), square, spriteName)
+    if not obj then return nil end
+    if tileObject then
+        square:AddTileObject(obj)
+    else
+        square:AddSpecialObject(obj)
+    end
+    square:RecalcProperties()
+    obj:transmitCompleteItemToClients()
+    obj:transmitModData()
+    return obj
+end
+
+local function maybeRoadGrowth(square, chance, grassRatio, mossRatio, modData)
+    if chance <= 0 or ZombRandFloat(0, 1) >= chance then return end
+    local spriteName
+    if ZombRandFloat(0, 1) < grassRatio then
+        spriteName = ROAD_GRASS_POOL[ZombRand(#ROAD_GRASS_POOL) + 1]
+    else
+        spriteName = LEAF_POOL[ZombRand(#LEAF_POOL) + 1]
+    end
+    if addIsoObject(square, spriteName, false) then
+        modData.ATF_roadGrowth = true
+    end
+end
+
+local function maybeGroundcover(square, chance, modData)
+    if chance <= 0 or ZombRandFloat(0, 1) >= chance then return end
+    local pool = ZombRand(3) == 0 and LEAF_POOL or GROUND_GRASS_POOL
+    local spriteName = pool[ZombRand(#pool) + 1]
+    if addIsoObject(square, spriteName, false) then
+        modData.ATF_groundGrowth = true
+    end
+end
+
+local function maybeBush(square, chance, modData)
+    if chance <= 0 or ZombRandFloat(0, 1) >= chance then return end
+    if hasPrefixObject(square, 'f_bushes_') then return end
+    local spriteName = BUSH_POOL[ZombRand(#BUSH_POOL) + 1]
+    if addIsoObject(square, spriteName, false) then
+        modData.ATF_bush = true
+    end
+end
+
+local function maybeRoofGrowth(square, cfg, modData)
+    if cfg.roofOverlayChance <= 0 or ZombRandFloat(0, 1) >= cfg.roofOverlayChance then return end
+    local spriteName
+    if ZombRandFloat(0, 1) < cfg.roofLeafRatio then
+        spriteName = LEAF_POOL[ZombRand(#LEAF_POOL) + 1]
+    else
+        spriteName = ROAD_GRASS_POOL[ZombRand(#ROAD_GRASS_POOL) + 1]
+    end
+    if addIsoObject(square, spriteName, false) then
+        modData.ATF_roofGrowth = true
+    end
+end
+
+local function maybeTree(square, chance, modData, smallOnly)
+    if chance <= 0 or ZombRandFloat(0, 1) >= chance then return end
+    local chunk = square.getChunk and square:getChunk() or nil
+    if not chunk then return end
+    local spriteName = smallOnly and SMALL_TREE_POOL[ZombRand(#SMALL_TREE_POOL) + 1] or TREE_POOL[ZombRand(#TREE_POOL) + 1]
+    local sprite = getSprite(spriteName)
+    if not sprite then return end
+    local tree = IsoTree.new(square, sprite)
+    if not tree then return end
+    square:AddSpecialObject(tree)
+    square:RecalcProperties()
+    tree:transmitCompleteItemToClients()
+    tree:transmitModData()
+    modData.ATF_serverTree = true
+end
+
+local function hasVines(square)
+    return hasPrefixObject(square, 'f_wallvines_')
+end
+
+local function vinePoolFor(obj)
+    local texture = obj.getTextureName and obj:getTextureName() or ''
+    local low = hasProperty(obj, 'FenceTypeLow') or startsWith(texture, 'fixtures_railings')
+    if hasProperty(obj, 'WallNW') then
+        return low and WALL_NW_LOW or WALL_NW
+    end
+    if hasProperty(obj, 'WallW') or hasProperty(obj, 'WindowW') or hasProperty(obj, 'DoorWallW') or hasProperty(obj, 'attachedW') or hasProperty(obj, 'WallWTrans') then
+        return low and WALL_W_LOW or WALL_W
+    end
+    if hasProperty(obj, 'WallN') or hasProperty(obj, 'WindowN') or hasProperty(obj, 'DoorWallN') then
+        return low and WALL_N_LOW or WALL_N
+    end
+    return nil
+end
+
+local function maybeVines(square, chance, modData)
+    if chance <= 0 or ZombRandFloat(0, 1) >= chance then return end
+    if hasVines(square) then return end
+    local objects = square:getObjects()
+    if not objects then return end
+    for i = 0, objects:size() - 1 do
+        local obj = objects:get(i)
+        if obj then
+            local texture = obj.getTextureName and obj:getTextureName() or nil
+            if texture and not startsWith(texture, 'walls_detailling') and not startsWith(texture, 'walls_exterior_roofs') then
+                local pool = vinePoolFor(obj)
+                if pool then
+                    local spriteName = pool[ZombRand(#pool) + 1]
+                    if addIsoObject(square, spriteName, true) then
+                        modData.ATF_vines = true
+                        return
+                    end
+                end
+            end
+        end
+    end
+end
+
+local function loadSquare(square)
+    if not square then return end
+    local z = square:getZ()
+    if z < 0 or z > 7 then return end
+    local modData = square:getModData()
+    if modData.ATF_cleanB42 then return end
+
+    local cfg = getConfig()
+    local outside = square:getRoom() == nil and square:isOutside()
+    local floorName = floorSpriteName(square)
+    local road = floorName and ROAD_TILES[floorName] == true or false
+    local sidewalk = (not road) and isSidewalkSquare(square)
+    local natural = floorName and NATURAL_TILES[floorName] == true or false
+    local roof = isFlatRoofSquare(square)
+
+    if outside and roof and squareIsUsable(square) and not hasAnyGrowth(square) then
+        maybeRoofGrowth(square, cfg, modData)
+    elseif outside and squareIsUsable(square) and z == 0 and not hasAnyGrowth(square) then
+        if road then
+            maybeRoadGrowth(square, cfg.roadOverlayChance, cfg.roadGrassRatio, cfg.roadMossRatio, modData)
+            if not cfg.noTreesOnRoad then
+                maybeTree(square, cfg.treeDensity * 0.35, modData, true)
+            end
+        elseif sidewalk then
+            maybeRoadGrowth(square, cfg.sidewalkOverlayChance, cfg.sidewalkGrassRatio, cfg.sidewalkMossRatio, modData)
+        else
+            maybeGroundcover(square, cfg.groundcoverDensity, modData)
+            maybeBush(square, cfg.bushDensity, modData)
+            if natural or not road then
+                maybeTree(square, cfg.treeDensity, modData, false)
+            end
+        end
+    end
+
+    if outside and not square:isSolid() and not square:isSolidTrans() then
+        maybeVines(square, cfg.vinesChance, modData)
+    end
+
+    modData.ATF_cleanB42 = true
+    square:transmitModdata()
+end
+
+Events.LoadGridsquare.Add(loadSquare)
