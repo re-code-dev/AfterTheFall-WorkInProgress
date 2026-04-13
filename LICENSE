@@ -1,21 +1,20 @@
-MIT License
+# Software-Lizenzvertrag (EULA)
 
-Copyright (c) 2026 Seppel & Volt
+Copyright (c) 2026 Volt & Seppel. Alle Rechte vorbehalten.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Diese Software wird "wie besehen" ("as is") zur rein privaten, nicht-kommerziellen Nutzung zur Verfügung gestellt. Durch das Herunterladen, Installieren oder Verwenden der Software stimmst du den folgenden Bedingungen zu:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+### 1. Nutzungsrecht
+Du darfst die Software kostenlos für private Zwecke nutzen. Eine kommerzielle Nutzung (Verkauf, Nutzung in Unternehmen oder zur Gewinnerzielung) ist streng untersagt.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-aUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-out OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### 2. Verbot von Modifikationen
+Es ist nicht gestattet, den Quellcode oder die Binärdateien dieser Software zu verändern, zu dekompilieren, zu disassemblieren oder abgeleitete Werke (Derivative Works) daraus zu erstellen.
+
+### 3. Verbot der Weiterverbreitung
+Die Software darf nicht ohne ausdrückliche schriftliche Genehmigung des Urhebers auf anderen Plattformen hochgeladen, gespiegelt oder in anderen Softwarepaketen verbreitet werden.
+
+### 4. Haftungsausschluss
+Der Urheber übernimmt keine Haftung für Schäden, die durch die Nutzung dieser Software entstehen könnten. Die Nutzung erfolgt auf eigene Gefahr.
+
+### 5. Urheberrechtsschutz
+Alle Eigentumsrechte und Urheberrechte an der Software verbleiben beim oben genannten Urheber.
