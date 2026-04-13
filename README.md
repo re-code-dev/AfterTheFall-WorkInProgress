@@ -168,11 +168,7 @@ Please ensure:
 ---
 
 ## 📜 Lizenz
-
-Dieses Projekt steht unter der **MIT-Lizenz**.  
-Siehe die Datei **LICENSE** für Details.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+"Copyright (C) 2026 Volt & Seppel. All rights reserved. No part of this software may be modified, redistributed, or used for derivative works without express written permission."
 
 ---
 
